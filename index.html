@@ -49,12 +49,11 @@ body{
     0 0 40px rgba(77,184,255,0.7);
 }
 
-.header p{
+.header h2{
     margin-top:15px;
     font-size:28px;
     letter-spacing:6px;
     font-weight:300;
-    color:white;
 }
 
 /* CONTAINER */
@@ -123,33 +122,31 @@ body{
     transition:max-height 0.4s ease;
 }
 
-.content-inner{
+.content{
     padding:0 35px 35px;
     color:#d6d6d6;
     line-height:1.9;
     font-size:17px;
 }
 
-.content-inner h3{
+.content h3{
     color:#4db8ff;
     margin-top:30px;
     margin-bottom:10px;
     font-size:24px;
 }
 
-.content-inner p{
+.content p{
     margin-bottom:18px;
-    color:#d6d6d6;
 }
 
-.content-inner ul{
+.content ul{
     margin-left:20px;
     margin-bottom:20px;
 }
 
-.content-inner li{
+.content li{
     margin-bottom:8px;
-    color:#d6d6d6;
 }
 
 /* FOOTER */
@@ -186,9 +183,8 @@ footer{
         font-size:42px;
     }
 
-    .header p{
+    .header h2{
         font-size:18px;
-        letter-spacing:3px;
     }
 
     .accordion-button{
@@ -205,7 +201,7 @@ footer{
 
 <div class="header">
     <h1>NEXTLIFE RP</h1>
-    <p>FRAKTIONSREGELWERK</p>
+    <h2>FRAKTIONSREGELWERK</h2>
 </div>
 
 <div class="container">
@@ -219,7 +215,7 @@ footer{
 </button>
 
 <div class="accordion-content">
-<div class="content-inner">
+<div class="content">
 
 <h3>Allgemein</h3>
 
@@ -268,7 +264,7 @@ Neue Fraktionen müssen vor der Einreise einen Antrag im Discord stellen.
 </button>
 
 <div class="accordion-content">
-<div class="content-inner">
+<div class="content">
 
 <h3>LSMD / LSFD / Benny’s</h3>
 
@@ -300,7 +296,7 @@ Neue Fraktionen müssen vor der Einreise einen Antrag im Discord stellen.
 </button>
 
 <div class="accordion-content">
-<div class="content-inner">
+<div class="content">
 
 <ul>
 <li>Korruption innerhalb der Behörden ist verboten.</li>
@@ -323,7 +319,7 @@ Neue Fraktionen müssen vor der Einreise einen Antrag im Discord stellen.
 </button>
 
 <div class="accordion-content">
-<div class="content-inner">
+<div class="content">
 
 <h3>Geiseln</h3>
 
@@ -355,7 +351,7 @@ Neue Fraktionen müssen vor der Einreise einen Antrag im Discord stellen.
 </button>
 
 <div class="accordion-content">
-<div class="content-inner">
+<div class="content">
 
 <ul>
 <li>Der Staatsbankraub darf nur einmal pro Sonnenwende stattfinden.</li>
@@ -384,9 +380,9 @@ buttons.forEach(button => {
 
     button.addEventListener("click", () => {
 
-        button.classList.toggle("active");
-
         const content = button.nextElementSibling;
+
+        button.classList.toggle("active");
 
         if(content.style.maxHeight){
 
